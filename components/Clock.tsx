@@ -23,19 +23,24 @@ const Clock = () => {
   const dayString = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][
     time.getDay()
   ];
-  const timeString =
-    slicer(time.getHours()) +
-    ":" +
-    slicer(time.getMinutes()) +
-    ":" +
-    slicer(time.getSeconds());
+  const timeString = {
+    hour: slicer(time.getHours()),
+    minute: slicer(time.getMinutes()),
+    second: slicer(time.getSeconds()),
+  };
 
   return (
-    <div className="flex flex-col text-center">
+    <div className="flex flex-col-reverse sm:flex-col text-center">
       <div className="text-3xl font-bold p-3">
         {dateString} ({dayString})
       </div>
-      <div className="text-9xl font-bold">{timeString}</div>
+      <div className="text-9xl font-bold flex flex-col sm:flex-row">
+        <div>{timeString.hour}</div>
+        <span className="hidden sm:block">:</span>
+        <div>{timeString.minute}</div>
+        <span className="hidden sm:block">:</span>
+        <div>{timeString.second}</div>
+      </div>
     </div>
   );
 };
