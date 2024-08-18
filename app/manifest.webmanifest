@@ -1,0 +1,27 @@
+{
+  "name": "Clock app",
+  "short_name": "clock",
+  "description": "A simple clock app",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#0ea5e9",
+  "background_color": "#1e293b",
+  "icons": [
+    {
+      "purpose": "maskable",
+      "sizes": "512x512",
+      "src": "icon512_maskable.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any",
+      "sizes": "512x512",
+      "src": "icon512_rounded.png",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "any",
+  "dir": "auto",
+  "scope": "/",
+  "lang": "ja-JP"
+}
